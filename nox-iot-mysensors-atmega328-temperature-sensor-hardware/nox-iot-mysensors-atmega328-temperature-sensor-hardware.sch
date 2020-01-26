@@ -177,30 +177,6 @@ Wire Wire Line
 	7650 2300 6950 2300
 Connection ~ 6950 2300
 $Comp
-L power:GND #PWR0104
-U 1 1 5E1E784E
-P 5050 3450
-F 0 "#PWR0104" H 5050 3200 50  0001 C CNN
-F 1 "GND" H 4950 3450 50  0000 C CNN
-F 2 "" H 5050 3450 50  0001 C CNN
-F 3 "" H 5050 3450 50  0001 C CNN
-	1    5050 3450
-	-1   0    0    1   
-$EndComp
-$Comp
-L Sensor:DHT11 U2
-U 1 1 5E1B3C29
-P 5050 3750
-F 0 "U2" H 4806 3704 50  0000 R CNN
-F 1 "DHT11" H 4806 3795 50  0000 R CNN
-F 2 "Sensor:Aosong_DHT11_5.5x12.0_P2.54mm" H 5050 3350 50  0001 C CNN
-F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 5200 4000 50  0001 C CNN
-	1    5050 3750
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4000 3350 4750 3750
-$Comp
 L power:GND #PWR0105
 U 1 1 5E1F1E79
 P 3400 4050
@@ -210,39 +186,6 @@ F 2 "" H 3400 4050 50  0001 C CNN
 F 3 "" H 3400 4050 50  0001 C CNN
 	1    3400 4050
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J1
-U 1 1 5E1F447E
-P 1850 1350
-F 0 "J1" H 1768 1025 50  0000 C CNN
-F 1 "Conn_01x02" H 1768 1116 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 1850 1350 50  0001 C CNN
-F 3 "~" H 1850 1350 50  0001 C CNN
-	1    1850 1350
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0106
-U 1 1 5E1F540D
-P 2050 1350
-F 0 "#PWR0106" H 2050 1100 50  0001 C CNN
-F 1 "GND" V 2055 1222 50  0000 R CNN
-F 2 "" H 2050 1350 50  0001 C CNN
-F 3 "" H 2050 1350 50  0001 C CNN
-	1    2050 1350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+5V #PWR0107
-U 1 1 5E1F59FF
-P 2050 1250
-F 0 "#PWR0107" H 2050 1100 50  0001 C CNN
-F 1 "+5V" V 2065 1378 50  0000 L CNN
-F 2 "" H 2050 1250 50  0001 C CNN
-F 3 "" H 2050 1250 50  0001 C CNN
-	1    2050 1250
-	0    1    1    0   
 $EndComp
 $Comp
 L power:+5V #PWR0108
@@ -265,17 +208,6 @@ F 2 "" H 2800 1350 50  0001 C CNN
 F 3 "" H 2800 1350 50  0001 C CNN
 	1    2800 1350
 	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+5V #PWR0110
-U 1 1 5E1FC63D
-P 5050 4050
-F 0 "#PWR0110" H 5050 3900 50  0001 C CNN
-F 1 "+5V" H 5065 4223 50  0000 C CNN
-F 2 "" H 5050 4050 50  0001 C CNN
-F 3 "" H 5050 4050 50  0001 C CNN
-	1    5050 4050
-	-1   0    0    1   
 $EndComp
 $Comp
 L power:+5V #PWR0111
@@ -364,84 +296,133 @@ Text Label 7850 2950 0    50   ~ 0
 RX
 Text Label 7850 3050 0    50   ~ 0
 TX
-$Comp
-L Device:R_POT_TRIM RV1
-U 1 1 5E2569EA
-P 8850 1250
-F 0 "RV1" V 8643 1250 50  0000 C CNN
-F 1 "5K POT" V 8734 1250 50  0000 C CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 8850 1250 50  0001 C CNN
-F 3 "~" H 8850 1250 50  0001 C CNN
-	1    8850 1250
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+5V #PWR0115
-U 1 1 5E25E144
-P 8000 900
-F 0 "#PWR0115" H 8000 750 50  0001 C CNN
-F 1 "+5V" H 8100 900 50  0000 C CNN
-F 2 "" H 8000 900 50  0001 C CNN
-F 3 "" H 8000 900 50  0001 C CNN
-	1    8000 900 
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5E25F822
-P 9350 1400
-F 0 "R2" V 9143 1400 50  0000 C CNN
-F 1 "2K" V 9234 1400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 9280 1400 50  0001 C CNN
-F 3 "~" H 9350 1400 50  0001 C CNN
-	1    9350 1400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8300 1200 8300 1400
-Wire Wire Line
-	8300 1400 8850 1400
-$Comp
-L power:GND #PWR0116
-U 1 1 5E260C49
-P 9000 1250
-F 0 "#PWR0116" H 9000 1000 50  0001 C CNN
-F 1 "GND" V 9005 1122 50  0000 R CNN
-F 2 "" H 9000 1250 50  0001 C CNN
-F 3 "" H 9000 1250 50  0001 C CNN
-	1    9000 1250
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8850 1400 9200 1400
-Connection ~ 8850 1400
-Wire Wire Line
-	9500 1400 9500 900 
-Wire Wire Line
-	9500 900  8800 900 
-Wire Wire Line
-	8800 900  8800 600 
-Connection ~ 8800 900 
-Wire Wire Line
-	8800 900  8600 900 
-Text GLabel 8700 600  0    50   Output ~ 0
-3.3V
-Wire Wire Line
-	8800 600  8700 600 
 Text GLabel 6950 900  1    50   Input ~ 0
 3.3V
 Connection ~ 6950 1100
 Wire Wire Line
 	6950 900  6950 1100
 $Comp
-L Regulator_Linear:LM317_3PinPackage U5
-U 1 1 5E283E2A
-P 8300 900
-F 0 "U5" H 8300 1142 50  0000 C CNN
-F 1 "LM317" H 8300 1051 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8300 1150 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 8300 900 50  0001 C CNN
-	1    8300 900 
+L Regulator_Linear:LM1117-3.3 U2
+U 1 1 5E2DE152
+P 8600 1900
+F 0 "U2" H 8600 2142 50  0000 C CNN
+F 1 "WAVGAT 3.3V" H 8600 2051 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8600 1900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 8600 1900 50  0001 C CNN
+	1    8600 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR02
+U 1 1 5E2DFBC7
+P 8300 1900
+F 0 "#PWR02" H 8300 1750 50  0001 C CNN
+F 1 "+5V" H 8400 1900 50  0000 C CNN
+F 2 "" H 8300 1900 50  0001 C CNN
+F 3 "" H 8300 1900 50  0001 C CNN
+	1    8300 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5E2E0195
+P 8600 2200
+F 0 "#PWR03" H 8600 1950 50  0001 C CNN
+F 1 "GND" V 8605 2072 50  0000 R CNN
+F 2 "" H 8600 2200 50  0001 C CNN
+F 3 "" H 8600 2200 50  0001 C CNN
+	1    8600 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 9100 1900 2    50   Output ~ 0
+3.3V
+Wire Wire Line
+	8900 1900 9100 1900
+Text GLabel 5000 3850 0    50   Input ~ 0
+3.3V
+Wire Wire Line
+	5500 3850 5000 3850
+$Comp
+L power:GND #PWR01
+U 1 1 5E2F2798
+P 5250 3750
+F 0 "#PWR01" H 5250 3500 50  0001 C CNN
+F 1 "GND" H 5255 3577 50  0000 C CNN
+F 2 "" H 5250 3750 50  0001 C CNN
+F 3 "" H 5250 3750 50  0001 C CNN
+	1    5250 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 3750 5500 3750
+Wire Wire Line
+	4000 2750 4850 2750
+Wire Wire Line
+	4850 2750 4850 3650
+Wire Wire Line
+	4850 3650 5500 3650
+Wire Wire Line
+	4000 2650 4950 2650
+Wire Wire Line
+	4950 2650 4950 3550
+Wire Wire Line
+	4950 3550 5500 3550
+Text Label 5350 3550 0    50   ~ 0
+SDA
+Text Label 5350 3650 0    50   ~ 0
+SCL
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5E2E1CFC
+P 1850 1750
+F 0 "J1" H 1768 2067 50  0000 C CNN
+F 1 "Conn_01x03" H 1768 1976 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" H 1850 1750 50  0001 C CNN
+F 3 "~" H 1850 1750 50  0001 C CNN
+	1    1850 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 5E2E3230
+P 2050 1650
+F 0 "#PWR04" H 2050 1500 50  0001 C CNN
+F 1 "+5V" V 2065 1778 50  0000 L CNN
+F 2 "" H 2050 1650 50  0001 C CNN
+F 3 "" H 2050 1650 50  0001 C CNN
+	1    2050 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5E2E3606
+P 2050 1750
+F 0 "#PWR05" H 2050 1500 50  0001 C CNN
+F 1 "GND" V 2055 1622 50  0000 R CNN
+F 2 "" H 2050 1750 50  0001 C CNN
+F 3 "" H 2050 1750 50  0001 C CNN
+	1    2050 1750
+	0    -1   -1   0   
+$EndComp
+Text GLabel 2050 1850 2    50   Output ~ 0
+Battery+
+Text GLabel 4250 2350 2    50   Output ~ 0
+Battery+
+Wire Wire Line
+	4250 2350 4200 2350
+Wire Wire Line
+	4200 2350 4200 2250
+Wire Wire Line
+	4200 2250 4000 2250
+$Comp
+L Connector_Generic:Conn_01x04 J3
+U 1 1 5E2EC327
+P 5700 3650
+F 0 "J3" H 5780 3642 50  0000 L CNN
+F 1 "AHT10" H 5780 3551 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 5700 3650 50  0001 C CNN
+F 3 "~" H 5700 3650 50  0001 C CNN
+	1    5700 3650
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
