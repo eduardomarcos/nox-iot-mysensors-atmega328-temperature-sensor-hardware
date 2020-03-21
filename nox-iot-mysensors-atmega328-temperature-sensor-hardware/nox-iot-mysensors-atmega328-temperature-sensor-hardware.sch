@@ -295,28 +295,6 @@ F 3 "~" H 2400 1550 50  0001 C CNN
 	1    2400 1550
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Switch:SW_Push_Dual SW1
-U 1 1 5E36B497
-P 4400 4300
-F 0 "SW1" H 4400 4585 50  0000 C CNN
-F 1 "Reset" H 4400 4494 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx" H 4400 4500 50  0001 C CNN
-F 3 "~" H 4400 4500 50  0001 C CNN
-	1    4400 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR06
-U 1 1 5E36ED7A
-P 4200 4300
-F 0 "#PWR06" H 4200 4050 50  0001 C CNN
-F 1 "GND" H 4205 4127 50  0000 C CNN
-F 2 "" H 4200 4300 50  0001 C CNN
-F 3 "" H 4200 4300 50  0001 C CNN
-	1    4200 4300
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4700 2850 4700 4300
 Wire Wire Line
@@ -453,5 +431,27 @@ F 2 "" H 2250 2150 50  0001 C CNN
 F 3 "" H 2250 2150 50  0001 C CNN
 	1    2250 2150
 	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5E76E48A
+P 4500 4500
+F 0 "J5" H 4418 4717 50  0000 C CNN
+F 1 "Switch Connector" V 4650 4500 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical" H 4500 4500 50  0001 C CNN
+F 3 "~" H 4500 4500 50  0001 C CNN
+	1    4500 4500
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5E770C54
+P 4500 4300
+F 0 "#PWR0111" H 4500 4050 50  0001 C CNN
+F 1 "GND" H 4505 4127 50  0000 C CNN
+F 2 "" H 4500 4300 50  0001 C CNN
+F 3 "" H 4500 4300 50  0001 C CNN
+	1    4500 4300
+	0    1    1    0   
 $EndComp
 $EndSCHEMATC
