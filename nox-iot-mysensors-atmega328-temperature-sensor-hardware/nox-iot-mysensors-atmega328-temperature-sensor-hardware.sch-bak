@@ -19,7 +19,7 @@ U 1 1 5E1B0DF6
 P 3400 2550
 F 0 "U1" H 3450 2800 50  0000 R CNN
 F 1 "ATmega328P-PU" H 3650 2650 50  0000 R CNN
-F 2 "Package_DIP:DIP-28_W7.62mm" H 3400 2550 50  0001 C CIN
+F 2 "Package_DIP:DIP-28_W7.62mm_Socket" H 3400 2550 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 3400 2550 50  0001 C CNN
 	1    3400 2550
 	1    0    0    -1  
@@ -188,39 +188,6 @@ F 3 "" H 3400 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0108
-U 1 1 5E1F682D
-P 3400 1050
-F 0 "#PWR0108" H 3400 900 50  0001 C CNN
-F 1 "+5V" H 3300 1050 50  0000 C CNN
-F 2 "" H 3400 1050 50  0001 C CNN
-F 3 "" H 3400 1050 50  0001 C CNN
-	1    3400 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0109
-U 1 1 5E1FA370
-P 2800 1350
-F 0 "#PWR0109" H 2800 1200 50  0001 C CNN
-F 1 "+5V" V 2815 1478 50  0000 L CNN
-F 2 "" H 2800 1350 50  0001 C CNN
-F 3 "" H 2800 1350 50  0001 C CNN
-	1    2800 1350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+5V #PWR0111
-U 1 1 5E1FCC86
-P 3500 1050
-F 0 "#PWR0111" H 3500 900 50  0001 C CNN
-F 1 "+5V" H 3600 1050 50  0000 C CNN
-F 2 "" H 3500 1050 50  0001 C CNN
-F 3 "" H 3500 1050 50  0001 C CNN
-	1    3500 1050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x06 J2
 U 1 1 5E1FE269
 P 8200 3050
@@ -232,17 +199,6 @@ F 3 "~" H 8200 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0112
-U 1 1 5E2033C2
-P 8000 3150
-F 0 "#PWR0112" H 8000 3000 50  0001 C CNN
-F 1 "+5V" V 8015 3278 50  0000 L CNN
-F 2 "" H 8000 3150 50  0001 C CNN
-F 3 "" H 8000 3150 50  0001 C CNN
-	1    8000 3150
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR0113
 U 1 1 5E2039CD
 P 8000 3350
@@ -251,17 +207,6 @@ F 1 "GND" V 8005 3222 50  0000 R CNN
 F 2 "" H 8000 3350 50  0001 C CNN
 F 3 "" H 8000 3350 50  0001 C CNN
 	1    8000 3350
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+5V #PWR0114
-U 1 1 5E22D728
-P 5600 2550
-F 0 "#PWR0114" H 5600 2400 50  0001 C CNN
-F 1 "+5V" V 5615 2678 50  0000 L CNN
-F 2 "" H 5600 2550 50  0001 C CNN
-F 3 "" H 5600 2550 50  0001 C CNN
-	1    5600 2550
 	0    1    1    0   
 $EndComp
 $Comp
@@ -281,7 +226,7 @@ Wire Wire Line
 	6750 2950 8000 2950
 Connection ~ 5600 2850
 Wire Wire Line
-	4000 2850 5600 2850
+	4000 2850 4700 2850
 Wire Wire Line
 	4000 3150 6750 3150
 Wire Wire Line
@@ -296,52 +241,9 @@ Text Label 7850 2950 0    50   ~ 0
 RX
 Text Label 7850 3050 0    50   ~ 0
 TX
-Text GLabel 6950 900  1    50   Input ~ 0
-3.3V
 Connection ~ 6950 1100
 Wire Wire Line
 	6950 900  6950 1100
-$Comp
-L Regulator_Linear:LM1117-3.3 U2
-U 1 1 5E2DE152
-P 8600 1900
-F 0 "U2" H 8600 2142 50  0000 C CNN
-F 1 "WAVGAT 3.3V" H 8600 2051 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8600 1900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 8600 1900 50  0001 C CNN
-	1    8600 1900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR02
-U 1 1 5E2DFBC7
-P 8300 1900
-F 0 "#PWR02" H 8300 1750 50  0001 C CNN
-F 1 "+5V" H 8400 1900 50  0000 C CNN
-F 2 "" H 8300 1900 50  0001 C CNN
-F 3 "" H 8300 1900 50  0001 C CNN
-	1    8300 1900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR03
-U 1 1 5E2E0195
-P 8600 2200
-F 0 "#PWR03" H 8600 1950 50  0001 C CNN
-F 1 "GND" V 8605 2072 50  0000 R CNN
-F 2 "" H 8600 2200 50  0001 C CNN
-F 3 "" H 8600 2200 50  0001 C CNN
-	1    8600 2200
-	1    0    0    -1  
-$EndComp
-Text GLabel 9100 1900 2    50   Output ~ 0
-3.3V
-Wire Wire Line
-	8900 1900 9100 1900
-Text GLabel 5000 3850 0    50   Input ~ 0
-3.3V
-Wire Wire Line
-	5500 3850 5000 3850
 $Comp
 L power:GND #PWR01
 U 1 1 5E2F2798
@@ -372,57 +274,184 @@ SDA
 Text Label 5350 3650 0    50   ~ 0
 SCL
 $Comp
-L Connector_Generic:Conn_01x03 J1
-U 1 1 5E2E1CFC
-P 1850 1750
-F 0 "J1" H 1768 2067 50  0000 C CNN
-F 1 "Conn_01x03" H 1768 1976 50  0000 C CNN
-F 2 "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical" H 1850 1750 50  0001 C CNN
-F 3 "~" H 1850 1750 50  0001 C CNN
-	1    1850 1750
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR04
-U 1 1 5E2E3230
-P 2050 1650
-F 0 "#PWR04" H 2050 1500 50  0001 C CNN
-F 1 "+5V" V 2065 1778 50  0000 L CNN
-F 2 "" H 2050 1650 50  0001 C CNN
-F 3 "" H 2050 1650 50  0001 C CNN
-	1    2050 1650
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GND #PWR05
 U 1 1 5E2E3606
-P 2050 1750
-F 0 "#PWR05" H 2050 1500 50  0001 C CNN
-F 1 "GND" V 2055 1622 50  0000 R CNN
-F 2 "" H 2050 1750 50  0001 C CNN
-F 3 "" H 2050 1750 50  0001 C CNN
-	1    2050 1750
+P 2600 1650
+F 0 "#PWR05" H 2600 1400 50  0001 C CNN
+F 1 "GND" V 2605 1522 50  0000 R CNN
+F 2 "" H 2600 1650 50  0001 C CNN
+F 3 "" H 2600 1650 50  0001 C CNN
+	1    2600 1650
 	0    -1   -1   0   
 $EndComp
-Text GLabel 2050 1850 2    50   Output ~ 0
-Battery+
-Text GLabel 4250 2350 2    50   Output ~ 0
-Battery+
-Wire Wire Line
-	4250 2350 4200 2350
-Wire Wire Line
-	4200 2350 4200 2250
-Wire Wire Line
-	4200 2250 4000 2250
 $Comp
-L Connector_Generic:Conn_01x04 J?
+L Connector_Generic:Conn_01x04 J3
 U 1 1 5E2EC327
 P 5700 3650
-F 0 "J?" H 5780 3642 50  0000 L CNN
+F 0 "J3" H 5780 3642 50  0000 L CNN
 F 1 "AHT10" H 5780 3551 50  0000 L CNN
-F 2 "" H 5700 3650 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 5700 3650 50  0001 C CNN
 F 3 "~" H 5700 3650 50  0001 C CNN
 	1    5700 3650
 	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5E3624A5
+P 2400 1550
+F 0 "J1" H 2318 1767 50  0000 C CNN
+F 1 "Vin" H 2318 1676 50  0000 C CNN
+F 2 "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical" H 2400 1550 50  0001 C CNN
+F 3 "~" H 2400 1550 50  0001 C CNN
+	1    2400 1550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_Dual SW1
+U 1 1 5E36B497
+P 4400 4300
+F 0 "SW1" H 4400 4585 50  0000 C CNN
+F 1 "Reset" H 4400 4494 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx" H 4400 4500 50  0001 C CNN
+F 3 "~" H 4400 4500 50  0001 C CNN
+	1    4400 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5E36ED7A
+P 4200 4300
+F 0 "#PWR06" H 4200 4050 50  0001 C CNN
+F 1 "GND" H 4205 4127 50  0000 C CNN
+F 2 "" H 4200 4300 50  0001 C CNN
+F 3 "" H 4200 4300 50  0001 C CNN
+	1    4200 4300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4700 2850 4700 4300
+Wire Wire Line
+	4700 4300 4600 4300
+Connection ~ 4700 2850
+Wire Wire Line
+	4700 2850 5600 2850
+Wire Wire Line
+	5500 3850 5000 3850
+Text GLabel 5000 3850 0    50   Input ~ 0
+3.3V
+Text GLabel 6950 900  1    50   Input ~ 0
+3.3V
+Wire Wire Line
+	8900 1900 9100 1900
+Text GLabel 9100 1900 2    50   Output ~ 0
+3.3V
+$Comp
+L power:GND #PWR03
+U 1 1 5E2E0195
+P 8600 2200
+F 0 "#PWR03" H 8600 1950 50  0001 C CNN
+F 1 "GND" V 8605 2072 50  0000 R CNN
+F 2 "" H 8600 2200 50  0001 C CNN
+F 3 "" H 8600 2200 50  0001 C CNN
+	1    8600 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM1117-3.3 U2
+U 1 1 5E2DE152
+P 8600 1900
+F 0 "U2" H 8600 2142 50  0000 C CNN
+F 1 "WAVGAT 3.3V" H 8600 2051 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 8600 1900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 8600 1900 50  0001 C CNN
+	1    8600 1900
+	1    0    0    -1  
+$EndComp
+Text GLabel 3500 1050 1    50   Output ~ 0
+3.3V
+Text GLabel 3400 1050 1    50   Output ~ 0
+3.3V
+Text GLabel 8000 3150 0    50   Output ~ 0
+3.3V
+Text GLabel 5650 2550 2    50   Output ~ 0
+3.3V
+Wire Wire Line
+	5600 2550 5650 2550
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 5E764A8C
+P 2450 2150
+F 0 "J4" H 2530 2142 50  0000 L CNN
+F 1 "TP4056" H 2530 2051 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 2450 2150 50  0001 C CNN
+F 3 "~" H 2450 2150 50  0001 C CNN
+	1    2450 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5E765917
+P 2250 2150
+F 0 "#PWR08" H 2250 1900 50  0001 C CNN
+F 1 "GND" V 2255 2022 50  0000 R CNN
+F 2 "" H 2250 2150 50  0001 C CNN
+F 3 "" H 2250 2150 50  0001 C CNN
+	1    2250 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5E768EE0
+P 2250 2050
+F 0 "#PWR09" H 2250 1800 50  0001 C CNN
+F 1 "GND" V 2255 1922 50  0000 R CNN
+F 2 "" H 2250 2050 50  0001 C CNN
+F 3 "" H 2250 2050 50  0001 C CNN
+	1    2250 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+36V #PWR?
+U 1 1 5E778F3C
+P 2600 1550
+F 0 "#PWR?" H 2600 1400 50  0001 C CNN
+F 1 "+36V" V 2615 1678 50  0000 L CNN
+F 2 "" H 2600 1550 50  0001 C CNN
+F 3 "" H 2600 1550 50  0001 C CNN
+	1    2600 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+36V #PWR?
+U 1 1 5E779504
+P 2250 2250
+F 0 "#PWR?" H 2250 2100 50  0001 C CNN
+F 1 "+36V" V 2265 2378 50  0000 L CNN
+F 2 "" H 2250 2250 50  0001 C CNN
+F 3 "" H 2250 2250 50  0001 C CNN
+	1    2250 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+4V #PWR?
+U 1 1 5E77A1CA
+P 8300 1900
+F 0 "#PWR?" H 8300 1750 50  0001 C CNN
+F 1 "+4V" V 8315 2028 50  0000 L CNN
+F 2 "" H 8300 1900 50  0001 C CNN
+F 3 "" H 8300 1900 50  0001 C CNN
+	1    8300 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+4V #PWR?
+U 1 1 5E77B602
+P 2250 2350
+F 0 "#PWR?" H 2250 2200 50  0001 C CNN
+F 1 "+4V" V 2265 2478 50  0000 L CNN
+F 2 "" H 2250 2350 50  0001 C CNN
+F 3 "" H 2250 2350 50  0001 C CNN
+	1    2250 2350
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC
